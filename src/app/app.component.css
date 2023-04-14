@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+html {
+    display: grid;
+    min-height: 100%;
+}
+
+body {
+    display: grid;
+    background: linear-gradient(to bottom left, #79c7c5 40%, #f9fbff 100%);
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    position: relative;
+    margin: 1% auto;
+    width: 90%;
+    height: 75vh;
+}
+
+.container1 {
+    position: relative;
+    margin: 1% auto;
+    width: 90%;
+}
+
+
+.top-bar {
+    width: 100%;
+    height: 60px;
+    background: #f9fbff;
+    border-radius: 10px 10px 0 0;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(to bottom left, #000000 20%, #000000 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 11px;
+    left: 15px;
+}
+
+.avatar p {
+    color: #f9fbff;
+    margin: 7px 12px;
+}
+
+.name {
+    position: absolute;
+    top: 22px;
+    text-transform: uppercase;
+    color: #777;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    font-weight: 500;
+    left: 60px;
+}
+
+.menu {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+}
+
+.icons {
+    position: absolute;
+    color: #a1e2d9;
+    padding: 10px;
+    top: 5px;
+    right: 21px;
+    cursor: pointer;
+}
+
+.icons .fas {
+    padding: 5px;
+    opacity: 0.8;
+}
+
+.icons .fas:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+}
+
+.dots {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #79c7c5;
+    box-shadow: 0px 7px 0px #79c7c5, 0px 14px 0px #79c7c5;
+}
+
+.middle {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    width: 100%;
+    opacity: 0.8;
+    height: 90%;
+}
+
+.scroll {
+    overflow-y: scroll;
+}
+
+.incoming {
+    position: absolute;
+    align-items: flex-start;
+    width: 50%;
+    top: 25%;
+    height: 100%;
+    padding: 20px;
+}
+
+.incoming .bubble {
+    background: linear-gradient(to bottom left, #32CD30 20%, #2d912d 100%);
+}
+
+.typing {
+    position: absolute;
+    top: 67%;
+    left: 20px;
+}
+
+.typing .bubble {
+    background: linear-gradient(to bottom left, #32CD30 20%, #2d912d 100%);
+    padding: 8px 13px 9px 13px;
+}
+
+.ellipsis {
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 50%;
+    animation: bounce 1.0s linear infinite;
+}
+
+.one {
+    animation-delay: 0.6s;
+}
+
+.two {
+    animation-delay: 0.5s;
+}
+
+.three {
+    animation-delay: 0.8s;
+}
+
+.bubble {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 0.7em;
+    padding: 10px 10px 10px 12px;
+    border-radius: 20px;
+}
+
+.lower {
+    margin-top: 45px;
+}
+
+.outgoing {
+    position: absolute;
+    align-items: flex-end;
+    padding: 20px;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.outgoing .bubble {
+    background: linear-gradient(to bottom right, #2f6cdd 20%, #72a3fe 100%);
+    float: right;
+}
+
+.bottom-bar {
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    bottom: 0;
+    background: #f9fbff;
+    border-radius: 0 0 10px 10px;
+}
+
+.left {
+    left: 0px;
+}
+
+input {
+    padding: 7px;
+    width: 75%;
+    left: 4%;
+    position: absolute;
+    border: 0;
+    top: 11px;
+    background: #f9fbff;
+    color: #000000;
+}
+
+input::placeholder {
+    color: #424141;
+}
+
+input:focus {
+    color: #000000;
+    outline: 0;
+}
+
+button {
+    position: absolute;
+    border: 0;
+    font-size: 1em;
+    color: #4784f6;
+    top: 19px;
+    opacity: 0.8;
+    right: 25px;
+    cursor: pointer;
+    outline: 0;
+    background-color: white;
+}
+
+button:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+    color: #1a55c3;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.7em;
+    padding: 10px;
+}
+
+footer p {
+    color: #79c7c5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+footer a {
+    color: #f9fbff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #a1e2d9;
+}
+
+.query-bar {
+    margin-top: 10px;
+    height: 100px;
+    background: #f9fbff;
+    border-radius: 10px;
+}
+
+.loader {
+    width: 80px;
+    height: 50px;
+    position: relative;
+  }
+  
+  .loader-text {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    color: #C8B6FF;
+    animation: text_713 3.5s ease both infinite;
+    font-size: .8rem;
+    letter-spacing: 1px;
+  }
+  
+  .load {
+    background-color: #9A79FF;
+    border-radius: 50px;
+    display: block;
+    height: 16px;
+    width: 16px;
+    bottom: 0;
+    position: absolute;
+    transform: translateX(64px);
+    animation: loading_713 3.5s ease both infinite;
+  }
+  
+  .load::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #D1C2FF;
+    border-radius: inherit;
+    animation: loading2_713 3.5s ease both infinite;
+  }
+  
+  @keyframes text_713 {
+    0% {
+      letter-spacing: 1px;
+      transform: translateX(0px);
+    }
+  
+    40% {
+      letter-spacing: 2px;
+      transform: translateX(26px);
+    }
+  
+    80% {
+      letter-spacing: 1px;
+      transform: translateX(32px);
+    }
+  
+    90% {
+      letter-spacing: 2px;
+      transform: translateX(0px);
+    }
+  
+    100% {
+      letter-spacing: 1px;
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes loading_713 {
+    0% {
+      width: 16px;
+      transform: translateX(0px);
+    }
+  
+    40% {
+      width: 100%;
+      transform: translateX(0px);
+    }
+  
+    80% {
+      width: 16px;
+      transform: translateX(64px);
+    }
+  
+    90% {
+      width: 100%;
+      transform: translateX(0px);
+    }
+  
+    100% {
+      width: 16px;
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes loading2_713 {
+    0% {
+      transform: translateX(0px);
+      width: 16px;
+    }
+  
+    40% {
+      transform: translateX(0%);
+      width: 80%;
+    }
+  
+    80% {
+      width: 100%;
+      transform: translateX(0px);
+    }
+  
+    90% {
+      width: 80%;
+      transform: translateX(15px);
+    }
+  
+    100% {
+      transform: translateX(0px);
+      width: 16px;
+    }
+  }
+   
+     

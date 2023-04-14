@@ -1,0 +1,26 @@
+<div class="context">
+  <div class="container1">
+    <div class="chatbox">
+      <div class="query-bar" style="padding:1%;">
+        <p style="font-weight: bold;">Generated Query</p>
+        <div class="loader" *ngIf="loading">
+          <span class="load"></span>
+        </div>
+        <div *ngIf="!loading" class="scroll" style="height: 80%;">{{data?.query}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="chatbox">
+      <div class="middle scroll">
+        <div class="bubble" id="summaryData">{{data?.summaryDataArray}}</div>
+      </div>
+      <div class="bottom-bar">
+        <div class="chat">
+          <input type="text" placeholder="Ask me anything..." [(ngModel)]="prompt">
+          <button (click)="bindingData()"><i class="fa fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
