@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Renderer2 } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ModelapiService } from './modelapi.service';
 import Handsontable from 'handsontable';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,11 +13,11 @@ export class AppComponent implements OnInit {
   data: any;
   loading:boolean = false;
   ngOnInit(): void {}
-  constructor(private modelapiService: ModelapiService) {}
+  constructor(private modelapiService: ModelapiService,private render: Renderer2) {}
 
   query(value: any) {
     return new Promise((resolve, reject) => {
-      this.modelapiService.query(value).subscribe({
+      this.modelapiService.query(value + ' dont use limit in sql server only query').subscribe({
         next: (response) => {
           console.log(response);
           resolve(response);
@@ -31,6 +32,7 @@ export class AppComponent implements OnInit {
   async bindingData() {
     this.loading = true
     const container = document.querySelector('#summaryData');
+    this.render.setProperty(container, 'innerHTML', '');
     this.data = null
     console.log('Prompt', this.prompt);
     if (!this.prompt) {
