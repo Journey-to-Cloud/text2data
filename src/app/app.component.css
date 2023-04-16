@@ -220,7 +220,6 @@ input:focus {
 }
 
 button {
-    position: absolute;
     border: 0;
     font-size: 1em;
     color: #4784f6;
@@ -307,6 +306,68 @@ footer a:hover {
     border-radius: inherit;
     animation: loading2_713 3.5s ease both infinite;
   }
+
+  .buttonModified {
+    background-color: #4e54c8;
+    color: white;
+    padding: 11px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-top:2%;
+  }
+  .buttonModified:hover{
+    transform: none;
+    color:white;
+  }
+  
+
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .toggle input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #4e54c8;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+
   
   @keyframes text_713 {
     0% {
@@ -387,6 +448,8 @@ footer a:hover {
       transform: translateX(0px);
       width: 16px;
     }
+
+    
   }
    
      
