@@ -9,9 +9,9 @@
         <div *ngIf="!loading" style="height: 80%;">{{data?.prompt}}</div>
       </div>
       <div class="query-bar" style="padding: 1%; width: 50%;">
-        <p style="font-weight: bold;">Upload Files</p>
-        <input type="file" name="file" #fileInput style="position: inherit; font-size: inherit;margin-top: 2%;">
-        <button type="submit" class="buttonModified" (click)="onFileSelect()">Upload File</button>
+        <p style="font-weight: bold;">Upload File(Excel or CSV)</p>
+        <input class="fileUpload" type="file" name="file" #fileInput>
+        <button type="submit" (click)="onFileSelect()"><i class="fa fa-cloud-upload" aria-hidden="true"></i></button>
         <p style="color: green;" *ngIf="fileUploaded">{{successMsg}}</p>
       </div>
       <!-- <div class="query-bar" style=" align-items: center; padding: 1%; width: 20%; margin-left: 18px;">
